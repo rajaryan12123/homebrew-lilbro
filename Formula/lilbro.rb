@@ -2,16 +2,16 @@
 class Lilbro < Formula
   desc "Claude Code on your Mac, from Telegram"
   homepage "https://github.com/rajaryan12123/homebrew-lilbro"
-  version "0.1.1"
+  version "0.1.2"
 
   on_macos do
     on_arm do
-      url "https://github.com/rajaryan12123/homebrew-lilbro/releases/download/v0.1.1/lilbro-mac-arm64.tar.gz"
-      sha256 "d9157f0a7d41ead827dd21885521c256b3c59afe6bf08e11558284bbc75e51bf"
+      url "https://github.com/rajaryan12123/homebrew-lilbro/releases/download/v0.1.2/lilbro-mac-arm64.tar.gz"
+      sha256 "b586cdbcab140bb6054af2e4d8b2e0a0d3284b4719be3abd6d2c1f3ebd9c2f50"
     end
     on_intel do
-      url "https://github.com/rajaryan12123/homebrew-lilbro/releases/download/v0.1.1/lilbro-mac-x64.tar.gz"
-      sha256 "bafd5d73b726369422115f86312544d556ad51004290a001b814b9225ea01366"
+      url "https://github.com/rajaryan12123/homebrew-lilbro/releases/download/v0.1.2/lilbro-mac-x64.tar.gz"
+      sha256 "66f3d7924e72f70a26d32b9da4b25de69044dc37b59a04e8e655e75ec9bdab25"
     end
   end
 
@@ -24,7 +24,7 @@ class Lilbro < Formula
     <<~EOS
       Connect your Telegram bot and start it:
         lilbro setup
-      After `brew upgrade lilbro`, restart it:
+      To update: brew update && brew upgrade lilbro, then restart it:
         lilbro restart
     EOS
   end
