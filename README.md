@@ -11,6 +11,7 @@ private Telegram bot.
 
 - A Mac with [Claude Code](https://docs.anthropic.com/en/docs/claude-code) installed and logged in
   (typing `claude` in a terminal works)
+- [Homebrew](https://brew.sh)
 - Telegram on your phone
 
 ## Install (5 minutes)
@@ -19,12 +20,6 @@ private Telegram bot.
 username ending in `bot`. It gives you a **token** like `123456789:AAH...`. Keep it secret.
 
 **2. Install.** Paste this into Terminal:
-
-```bash
-curl -fsSL https://raw.githubusercontent.com/rajaryan12123/homebrew-lilbro/main/install.sh | bash
-```
-
-Or with Homebrew:
 
 ```bash
 brew install rajaryan12123/lilbro/lilbro
@@ -45,7 +40,7 @@ It starts by itself when you log in and restarts if it crashes. Everything stays
 | Something's wrong | `lilbro doctor` |
 | Watch the log | `lilbro logs` |
 | Restart / stop / start | `lilbro restart` · `lilbro stop` · `lilbro start` |
-| Update | `lilbro update` (Homebrew: `brew upgrade lilbro && lilbro restart`) |
+| Update | `brew upgrade lilbro && lilbro restart` |
 | Change bot, user or shell mode | `lilbro setup` |
 | Remove it | `lilbro uninstall` |
 
