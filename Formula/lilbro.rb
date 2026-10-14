@@ -2,16 +2,16 @@
 class Lilbro < Formula
   desc "Claude Code on your Mac, from Telegram"
   homepage "https://github.com/rajaryan12123/homebrew-lilbro"
-  version "0.1.0"
+  version "0.1.1"
 
   on_macos do
     on_arm do
-      url "https://github.com/rajaryan12123/homebrew-lilbro/releases/download/v0.1.0/lilbro-mac-arm64.tar.gz"
-      sha256 "ed782ec1fa1d8210f8ac2b9a23aa42e6b8a8b78dea4f998ea31f778fdaad78ad"
+      url "https://github.com/rajaryan12123/homebrew-lilbro/releases/download/v0.1.1/lilbro-mac-arm64.tar.gz"
+      sha256 "d9157f0a7d41ead827dd21885521c256b3c59afe6bf08e11558284bbc75e51bf"
     end
     on_intel do
-      url "https://github.com/rajaryan12123/homebrew-lilbro/releases/download/v0.1.0/lilbro-mac-x64.tar.gz"
-      sha256 "dd58aafe7b8dab4d203f0ff91e168974d958f8c68229a352d5dfca02eae63a4f"
+      url "https://github.com/rajaryan12123/homebrew-lilbro/releases/download/v0.1.1/lilbro-mac-x64.tar.gz"
+      sha256 "bafd5d73b726369422115f86312544d556ad51004290a001b814b9225ea01366"
     end
   end
 

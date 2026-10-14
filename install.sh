@@ -18,8 +18,9 @@ chmod 700 "$DATA"
 TMP="$(mktemp -d "$DATA/.install.XXXXXX")"
 trap 'rm -rf "$TMP"' EXIT
 
-echo "Downloading better-call-lilbro for this Mac"
-curl -fL --progress-bar "$URL" -o "$TMP/lilbro.tar.gz"
+printf 'Downloading better-call-lilbro for this Mac (about 40 MB)… '
+curl -fsSL "$URL" -o "$TMP/lilbro.tar.gz"
+echo "done"
 SUM="$(curl -fsSL "$URL.sha256" | cut -d' ' -f1)"
 [ "$(shasum -a 256 "$TMP/lilbro.tar.gz" | cut -d' ' -f1)" = "$SUM" ] || { echo "Checksum mismatch: download corrupted, try again." >&2; exit 1; }
 tar -xzf "$TMP/lilbro.tar.gz" -C "$TMP"
