@@ -57,5 +57,3 @@ It starts by itself when you log in and restarts if it crashes. Everything stays
 - **Shell mode** (off unless you turn it on) runs Terminal commands from Telegram: anyone who gets
   into your Telegram account could run anything on your Mac.
 - Your Mac has to be awake and online for the bot to answer.
-
-© Raj Aryan. All rights reserved. Free to use; the source code is not public.
