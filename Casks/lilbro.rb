@@ -5,20 +5,20 @@
 cask "lilbro" do
   arch arm: "arm64", intel: "x64"
 
-  version "0.1.5"
-  sha256 arm:   "fd6e6de842e6f0ea805e3613e0121330b8ce9a6804add9537da5c37b107d969d",
-         intel: "1a238e2290ee9d8ff27a4d2981ae2707a8f9e4c4740f2a37b0a4378ae9d55035"
+  version "0.1.6"
+  sha256 arm:   "2418872992e7aa04a567f9c143d4cdb0eb56dbb4a97c9379b6a80a8ae063122b",
+         intel: "dca91d6579da9ce12543d456b088f4b3378165690d2208277552fc97d589f90d"
 
   url "https://github.com/rajaryan12123/homebrew-lilbro/releases/download/v#{version}/lilbro-mac-#{arch}.tar.gz"
   name "lilbro"
-  desc "Use Claude Code from Telegram"
+  desc "Use Claude Code from Telegram or Slack"
   homepage "https://github.com/rajaryan12123/homebrew-lilbro"
 
   binary "lilbro/bin/lilbro"
 
 
   caveats <<~EOS
-    Connect your Telegram bot and start it:
+    Connect Telegram and/or Slack and start it:
       lilbro setup
     To update: brew update && brew upgrade lilbro, then restart it:
       lilbro restart
