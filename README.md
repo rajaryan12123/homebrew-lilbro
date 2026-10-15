@@ -26,8 +26,11 @@ brew install rajaryan12123/lilbro/lilbro
 lilbro setup
 ```
 
-Setup asks for your bot token, then asks you to message your bot so only **you** can use it,
-then starts it. Your bot messages you 🟢. Send it `/help`.
+Setup asks for your bot token, then asks you to message your bot so only **you** can use it, and
+whether to turn on shell mode. Then it starts, and macOS asks a few times whether **lilbro** may
+use your Downloads, Desktop and Documents folders and record the screen (for `/screenshot`): click
+**Allow** (or Don't Allow for anything you want to keep private). Your bot messages you 🟢. Send it
+`/help`.
 
 It starts by itself when you log in and restarts if it crashes. Everything stays on your Mac in
 `~/.better-call-lilbro/`.
@@ -38,11 +41,12 @@ It starts by itself when you log in and restarts if it crashes. Everything stays
 |---|---|
 | See if it's running | `lilbro status` |
 | Something's wrong | `lilbro doctor` |
+| Let macOS ask for folder and screen access again | `lilbro permissions` (at the Mac) |
 | Watch the log | `lilbro logs` |
 | Restart / stop / start | `lilbro restart` · `lilbro stop` · `lilbro start` |
-| Update | `brew upgrade lilbro && lilbro restart` |
+| Update | `brew update && brew upgrade lilbro && lilbro restart` |
 | Change bot, user or shell mode | `lilbro setup` |
-| Remove it | `lilbro uninstall` |
+| Remove it | `lilbro uninstall`, then `brew uninstall lilbro` |
 
 ## Good to know
 
@@ -51,4 +55,8 @@ It starts by itself when you log in and restarts if it crashes. Everything stays
 - **Telegram can see your prompts and Claude's replies** (bot chats aren't end-to-end encrypted).
 - **Shell mode** (off unless you turn it on) runs Terminal commands from Telegram: anyone who gets
   into your Telegram account could run anything on your Mac.
+- **macOS asks before lilbro touches your folders or screen.** If a popup comes up while you're
+  away, whatever triggered it waits until someone answers. Approve them once at the Mac (setup
+  does this, or run `lilbro permissions`). Change them later in System Settings → Privacy &
+  Security → Files & Folders / Screen & System Audio Recording → lilbro.
 - Your Mac has to be awake and online for the bot to answer.
