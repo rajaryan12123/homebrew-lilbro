@@ -5,9 +5,9 @@
 cask "lilbro" do
   arch arm: "arm64", intel: "x64"
 
-  version "0.1.6"
-  sha256 arm:   "2418872992e7aa04a567f9c143d4cdb0eb56dbb4a97c9379b6a80a8ae063122b",
-         intel: "dca91d6579da9ce12543d456b088f4b3378165690d2208277552fc97d589f90d"
+  version "0.1.7"
+  sha256 arm:   "4580060fc404c8d731d315ba4c550985c3928cee1088a5eac0f5ce39477f592a",
+         intel: "397a6f33195ff89e4877e8756de838facccff81b956a967dc57f62d339892510"
 
   url "https://github.com/rajaryan12123/homebrew-lilbro/releases/download/v#{version}/lilbro-mac-#{arch}.tar.gz"
   name "lilbro"
