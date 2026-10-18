@@ -51,10 +51,27 @@ It starts by itself when you log in and restarts if it crashes. Everything stays
 | Watch the log | `lilbro logs` |
 | Restart / stop / start | `lilbro restart` · `lilbro stop` · `lilbro start` |
 | Update | `brew update && brew upgrade lilbro && lilbro restart` |
-| Add Telegram or Slack later | `lilbro add telegram` · `lilbro add slack` |
-| Turn one off | `lilbro remove telegram` · `lilbro remove slack` |
+| Add Telegram, Slack or PagerDuty later | `lilbro add telegram` · `lilbro add slack` · `lilbro add pagerduty` |
+| Turn one off | `lilbro remove telegram` · `lilbro remove slack` · `lilbro remove pagerduty` |
 | Change bots, users or shell mode | `lilbro setup` |
 | Remove it | `lilbro uninstall`, then `brew uninstall lilbro` |
+
+## Handy from your phone
+
+Besides prompts and sessions, a few commands help when you're away from the Mac
+(Slack: `/<your command> <name>`):
+
+| Send | What it does |
+|---|---|
+| `/mcp` | which MCP servers work; **Reconnect** buttons for ones that dropped, a sign-in link for claude.ai connectors |
+| `/gcloud_adc` | sign in to Google Cloud again (Application Default Credentials): tap the link, sign in, send back the code (it's hidden right away) · `/gcloud_adc status` |
+| `/autoack` | PagerDuty auto-acknowledge, if you connected it: on/off, health, the last 14 hours |
+
+**PagerDuty auto-ack** (optional, `lilbro add pagerduty`): every few minutes lilbro acknowledges new
+incidents assigned to you on the services you pick, so PagerDuty doesn't call you; incidents stay
+open for triage. Ones a person triggered by hand, or from other teams' services, still ring. You
+get a short "📟 Acked N alerts from 12:42 to 13:12" every half hour (your choice in setup). It needs
+a PagerDuty *user* API token (My Profile → User Settings → Create API User Token).
 
 ## Good to know
 
