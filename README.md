@@ -88,3 +88,5 @@ a PagerDuty *user* API token (My Profile → User Settings → Create API User T
   does this, or run `lilbro permissions`). Change them later in System Settings → Privacy &
   Security → Files & Folders / Screen & System Audio Recording → lilbro.
 - Your Mac has to be awake and online for the bot to answer.
+- lilbro sends anonymous usage stats (version, macOS, which features are on, and daily counts of
+  prompts and commands), never prompts, replies, names, tokens or location.
