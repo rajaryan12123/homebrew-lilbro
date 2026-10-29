@@ -66,6 +66,7 @@ Besides prompts and sessions, a few commands help when you're away from the Mac
 | `/mcp` | which MCP servers work; **Reconnect** buttons for ones that dropped, a sign-in link for claude.ai connectors |
 | `/gcloud_adc` | sign in to Google Cloud again (Application Default Credentials): tap the link, sign in, send back the code (it's hidden right away) · `/gcloud_adc status` |
 | `/autoack` | PagerDuty auto-acknowledge, if you connected it: on/off, health, the last 14 hours |
+| `/update` | update lilbro to the newest version. You don't need to remember it: when a new version is out the bot tells you, with **Update now** / Later / Skip, and says "🟢 lilbro is back" after every restart |
 
 **PagerDuty auto-ack** (optional, `lilbro add pagerduty`): every few minutes lilbro acknowledges new
 incidents assigned to you on the services you pick, so PagerDuty doesn't call you; incidents stay
