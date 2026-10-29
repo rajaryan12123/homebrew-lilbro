@@ -5,9 +5,9 @@
 cask "lilbro" do
   arch arm: "arm64", intel: "x64"
 
-  version "0.1.12"
-  sha256 arm:   "c4921be2968ff0831e25aae8482607755a122e9545fe4bf7ec14adc89aa200af",
-         intel: "8ea690a6c1d40dc1add2066eeac6d09d7bf1acb7fa3085f72cf252f8bf8334ce"
+  version "0.1.13"
+  sha256 arm:   "e00ae3f53e5f3906b1f156c8ad34bb68a23ea709437bc6252a87001d99e3d189",
+         intel: "34890a68c729ba33aa1e1c9ec503b0a6ee9d7fa566ff2fda1961bc5735a30933"
 
   url "https://github.com/rajaryan12123/homebrew-lilbro/releases/download/v#{version}/lilbro-mac-#{arch}.tar.gz"
   name "lilbro"
@@ -16,6 +16,12 @@ cask "lilbro" do
 
   binary "lilbro/bin/lilbro"
 
+  # Homebrew marks the download as "from the internet", so macOS asks "Are you sure you want to
+  # open it?" the first time each new version starts, and the bot stays down until someone clicks
+  # Open at the Mac. Homebrew has already checked the download's sha256.
+  postflight do
+    system_command "/usr/bin/xattr", args: ["-dr", "com.apple.quarantine", "#{staged_path}/lilbro"]
+  end
 
   caveats <<~EOS
     Connect Telegram and/or Slack and start it:
